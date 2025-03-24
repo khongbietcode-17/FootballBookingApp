@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Spinner chọn Tỉnh -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn Tỉnh"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingBottom="4dp" />
+
+    <Spinner
+        android:id="@+id/spinner_tinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Spinner chọn Thành phố / Huyện -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn Thành phố / Huyện"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingTop="12dp"
+        android:paddingBottom="4dp" />
+
+    <Spinner
+        android:id="@+id/spinner_thanhpho_huyen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Nút tìm kiếm -->
+    <Button
+        android:id="@+id/btn_timkiem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tìm kiếm sân bóng"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Danh sách sân bóng -->
+    <ListView
+        android:id="@+id/lv_danhsachsan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"/>
+</LinearLayout>

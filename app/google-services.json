@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "324468000443",
+    "firebase_url": "https://dbdatsanbongda-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "dbdatsanbongda",
+    "storage_bucket": "dbdatsanbongda.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324468000443:android:77fd2f174c5297b2944b9e",
+        "android_client_info": {
+          "package_name": "com.example.datsanbongda"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA34x7CxYGrVaiVF6ZueVPNgCP0HLU-Bxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

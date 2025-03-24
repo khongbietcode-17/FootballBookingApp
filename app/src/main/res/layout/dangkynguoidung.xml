@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/white">
+    <EditText
+        android:id="@+id/et_tennguoidung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên của bạn"
+        android:background="@drawable/rounded_edidtext"
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/et_sodienthoai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số điện thoại"
+        android:background="@drawable/rounded_edidtext"
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/et_taikhoan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tài khoản"
+        android:background="@drawable/rounded_edidtext"
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/et_matkhau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mật khẩu"
+        android:background="@drawable/rounded_edidtext"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:inputType="textPassword"/>
+
+
+    <Button
+        android:id="@+id/btn_dangkys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:padding="14dp"
+        android:text="Start"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+</LinearLayout>

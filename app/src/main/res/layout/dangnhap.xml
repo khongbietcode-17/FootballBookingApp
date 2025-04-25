@@ -1,41 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="@color/white">
+    android:background="@drawable/anhbiachinh">
 
-
-    <EditText
-        android:id="@+id/et_taikhoan"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Tài khoản"
-        android:background="@drawable/rounded_edidtext"
-        android:padding="12dp"
-        android:textSize="16sp"/>
+        android:text="XIN CHÀO BẠN !"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/et_matkhau"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="359dp"
+        android:layout_height="314dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_borderbutton"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/et_taikhoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/rounded_edidtext"
+            android:hint="Tài khoản"
+            android:padding="12dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_dangnhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#7FE983"
+            android:padding="14dp"
+            android:text="Đăng nhập"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_matkhau"
+             />
+
+        <EditText
+            android:id="@+id/et_matkhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edidtext"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_taikhoan"
+             />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ĐĂNG NHÂP"
+            android:textColor="#7FE983"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/et_taikhoan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Mật khẩu"
-        android:background="@drawable/rounded_edidtext"
-        android:padding="12dp"
+        android:text="Quên mật khẩu ?"
+        android:textColor="#9254FF"
         android:textSize="16sp"
-        android:inputType="textPassword"/>
+        android:textStyle="bold" />
 
-
-    <Button
-        android:id="@+id/btn_dangnhap"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:padding="14dp"
-        android:text="Đăng nhập"
-        android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:layout_marginTop="10dp"
+        android:text="Bạn chưa có tài khoản ? Đăng ký tại đây !"
+        android:textColor="#6D6D6D"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
 </LinearLayout>

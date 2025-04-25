@@ -47,7 +47,20 @@ public class DangKySanActivity extends AppCompatActivity {
         spinnerTinh.setAdapter(tinhAdapter);
 
         // ✅ Thiết lập dữ liệu cho Spinner Thành phố/Huyện
-        String[] thanhPhoOptions = {"TP. Long Xuyên", "Tri Tôn"};
+        String[] thanhPhoOptions = {
+                "TP. Long Xuyên",
+                "TP. Châu Đốc",
+                "Thị xã Tân Châu",
+                "Huyện An Phú",
+                "Huyện Châu Phú",
+                "Huyện Châu Thành",
+                "Huyện Phú Tân",
+                "Huyện Thoại Sơn",
+                "Huyện Tri Tôn",
+                "Huyện Tịnh Biên",
+                "Huyện Chợ Mới"
+        };
+
         ArrayAdapter<String> thanhPhoAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, thanhPhoOptions);
         spinnerThanhPhoHuyen.setAdapter(thanhPhoAdapter);
 
@@ -69,7 +82,7 @@ public class DangKySanActivity extends AppCompatActivity {
         // ✅ Dùng idChuSan làm ID sân bóng
         String idSanBong = idChuSan;
 
-        SanBong sanBong = new SanBong(idSanBong, tenSanBong, tinh, thanhPhoHuyen, giaSan);
+        SanBong sanBong =  new SanBong(idSanBong, tenSanBong, tinh, thanhPhoHuyen, giaSan);
 
         databaseReference.child(idSanBong).setValue(sanBong)
                 .addOnSuccessListener(aVoid -> {

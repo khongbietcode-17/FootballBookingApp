@@ -1,73 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/white">
+    android:background="@drawable/anhbiachinh"
+    android:orientation="vertical"
+    android:padding="0dp">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/viewtop"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_height="25dp"
+        android:background="#7FE983"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/img_san_bong"
-            android:layout_width="250dp"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_san_mac_dinh" />
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#7FE983"
+        android:gravity="center"
+        android:text="  CHỦ SÂN BÓNG"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btn_cap_nhat_hinh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cập nhật hình ảnh"
-            android:padding="8dp"
-            android:layout_marginTop="12dp"/>
+    <!-- Danh sách đặt sân -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_border"
+        android:padding="10dp">
 
         <!-- Thông tin sân bóng -->
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="320dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corners"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sanbong"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/tv_ten_san"
+            android:textColor="#7FE983"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="210dp"
+            android:paddingTop="0dp"
             android:text="Tên sân bóng"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:paddingTop="8dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_diachi_san"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="0dp"
             android:text="Địa chỉ: Đang tải..."
             android:textSize="16sp"
-            android:paddingTop="4dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gia_san" />
 
         <TextView
             android:id="@+id/tv_gia_san"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="0dp"
             android:text="Giá: Đang tải..."
             android:textSize="16sp"
-            android:paddingBottom="12dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ten_san" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/rounded_borders"
+        android:padding="0dp">
+
+        <Button
+            android:id="@+id/btn_capnhathinh"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:backgroundTint="#7FE983"
+            android:padding="8dp"
+            android:text="Cập nhật hình ảnh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_thongtinsan"
+            android:layout_width="180dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="0dp"
+            android:backgroundTint="#7FE983"
+            android:padding="8dp"
+            android:text="Cập nhật thông tin sân"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-        <!-- Danh sách đặt sân -->
-        <TextView
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Danh sách đặt sân"
+            android:paddingTop="0dp"
+            android:layout_margin="15dp"
+            android:text="Danh sách đặt sân hôm nay:"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingTop="16dp" />
+            android:textStyle="bold" />
 
-        <ListView
-            android:id="@+id/lv_datsan"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:divider="@android:color/darker_gray"
-            android:dividerHeight="1dp"/>
-    </LinearLayout>
+    <ListView
+        android:id="@+id/lv_thongbao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:padding="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/bg_listview"
+        android:scrollbars="none"/>
 
-</ScrollView>
+
+</LinearLayout>
+
+

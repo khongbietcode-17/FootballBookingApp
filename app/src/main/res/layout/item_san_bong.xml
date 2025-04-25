@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <TextView
+        android:id="@+id/tv_ten_san"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên sân: "
+        android:textSize="16sp"
+        android:textColor="#7FE983"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_id_san"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID: "
+        android:textSize="16sp" />
+
+
+
+    <TextView
+        android:id="@+id/tv_gia_san"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá: "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_dia_chi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ: "
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tv_danhgia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đánh giá sân: 5 sao"
+        android:textSize="16sp"/>
+</LinearLayout>

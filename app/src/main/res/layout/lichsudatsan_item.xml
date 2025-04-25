@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_border">
+
+    <TextView
+        android:id="@+id/tvTenNguoiDat"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên người đặt" />
+
+    <TextView
+        android:id="@+id/tvSoDienThoai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SĐT: 0123456789" />
+
+    <TextView
+        android:id="@+id/tvGioBatDau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giờ bắt đầu: 18h00" />
+
+    <TextView
+        android:id="@+id/tvGioSuDung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thời lượng: 2 giờ" />
+
+</LinearLayout>

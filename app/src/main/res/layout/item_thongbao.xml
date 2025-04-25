@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_ten_nguoi_dung"
+        android:layout_width="wrap_content"
+        android:textColor="#7FE983"
+        android:layout_height="wrap_content"
+        android:text="Tên người dùng"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_so_dien_thoai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số điện thoại" />
+
+    <TextView
+        android:id="@+id/tv_gio_bat_dau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giờ bắt đầu" />
+
+    <TextView
+        android:id="@+id/tv_gio_su_dung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giờ sử dụng" />
+
+
+</LinearLayout>

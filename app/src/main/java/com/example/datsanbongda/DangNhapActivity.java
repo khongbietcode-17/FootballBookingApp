@@ -103,11 +103,17 @@ public class DangNhapActivity extends AppCompatActivity {
     }
 
     private void xuLyDangNhap(String id) {
+        DatabaseReference userRef;
         Intent intent;
+
         if (id.startsWith("NCS")) { // Nếu là Chủ Sân
+            userRef = FirebaseDatabase.getInstance("https://dbdatsanbongda-default-rtdb.asia-southeast1.firebasedatabase.app")
+                    .getReference("ChuSan").child(id);
             intent = new Intent(DangNhapActivity.this, GiaoDienChuSanActivity.class);
-            intent.putExtra("ID_CHU_SAN", id); // ✅ Truyền ID chủ sân
+            intent.putExtra("ID_CHU_SAN", id);
         } else if (id.startsWith("NDS")) { // Nếu là Người Dùng
+            userRef = FirebaseDatabase.getInstance("https://dbdatsanbongda-default-rtdb.asia-southeast1.firebasedatabase.app")
+                    .getReference("NguoiDung").child(id);
             intent = new Intent(DangNhapActivity.this, GiaoDienNguoiDungActivity.class);
             intent.putExtra("ID_NGUOI_DUNG", id);
         } else {
@@ -115,7 +121,30 @@ public class DangNhapActivity extends AppCompatActivity {
             return;
         }
 
-        startActivity(intent);
-        finish();
+        // Lấy thông tin chi tiết từ Firebase
+        userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    String tenNguoiDung = snapshot.child("tenNguoiDung").getValue(String.class);
+                    String soDienThoai = snapshot.child("soDienThoai").getValue(String.class);
+
+                    intent.putExtra("TEN_NGUOI_DUNG", tenNguoiDung);
+                    intent.putExtra("SO_DIEN_THOAI", soDienThoai);
+
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(DangNhapActivity.this, "Không tìm thấy thông tin tài khoản!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("Firebase", "Lỗi khi lấy thông tin người dùng: " + error.getMessage());
+            }
+        });
     }
+
+
 }

@@ -15,7 +15,7 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,14 +23,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DangKyNguoiDungActivity"/>
-        <activity android:name=".DangKyChuSanActivity"/>
-        <activity android:name=".DangKySanActivity"/>
-        <activity android:name=".DangNhapActivity"/>
-        <activity android:name=".GiaoDienChuSanActivity"/>
-        <activity android:name=".GiaoDienNguoiDungActivity"/>
-        <activity android:name=".DatSanActivity"/>
-        <activity android:name=".LichSuDatSanActivity"/>
+        <activity android:name=".activities.DangKyNguoiDungActivity"/>
+        <activity android:name=".activities.DangKyChuSanActivity"/>
+        <activity android:name=".activities.DangKySanActivity"/>
+        <activity android:name=".activities.DangNhapActivity"/>
+        <activity android:name=".activities.GiaoDienChuSanActivity"/>
+        <activity android:name=".activities.GiaoDienNguoiDungActivity"/>
+        <activity android:name=".activities.DatSanActivity"/>
+        <activity android:name=".activities.LichSuDatSanActivity"/>
+        <activity android:name=".activities.ThongBaoDatSanActivity"/>
+        <activity android:name=".activities.CapNhatThongTinActivity"/>
     </application>
 
 

@@ -1,11 +1,13 @@
-package com.example.datsanbongda;
+package com.example.datsanbongda.activities;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.datsanbongda.adapters.LichSuDatSanAdapter;
+import com.example.datsanbongda.R;
 import com.google.firebase.database.*;
 
 import java.util.ArrayList;
@@ -23,7 +25,7 @@ public class LichSuDatSanActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lichsudatsan);
+        setContentView(com.example.datsanbongda.R.layout.lichsudatsan);
 
         lvLichSu = findViewById(R.id.lv_lichsu);
         soDienThoaiNguoiDung = getIntent().getStringExtra("SO_DIEN_THOAI");

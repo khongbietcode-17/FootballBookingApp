@@ -108,12 +108,12 @@
         android:padding="0dp">
 
         <Button
-            android:id="@+id/btn_capnhathinh"
+            android:id="@+id/btnXemThongBao"
             android:layout_width="180dp"
             android:layout_height="45dp"
             android:backgroundTint="#7FE983"
             android:padding="8dp"
-            android:text="Cập nhật hình ảnh"
+            android:text="Xem thông báo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -131,25 +131,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="0dp"
-            android:layout_margin="15dp"
-            android:text="Danh sách đặt sân hôm nay:"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
-    <ListView
-        android:id="@+id/lv_thongbao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:dividerHeight="1dp"
-        android:padding="5dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/bg_listview"
-        android:scrollbars="none"/>
 
 
 </LinearLayout>

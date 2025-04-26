@@ -1,4 +1,4 @@
-package com.example.datsanbongda;
+package com.example.datsanbongda.models;
 
 public class SanBong {
     public String idSan, tenSan, tinh, thanhPhoHuyen, giaSan, diaChi;

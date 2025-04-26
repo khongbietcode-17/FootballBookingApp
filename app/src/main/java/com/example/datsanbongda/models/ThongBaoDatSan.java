@@ -1,4 +1,4 @@
-package com.example.datsanbongda;
+package com.example.datsanbongda.models;
 
 public class ThongBaoDatSan {
     private String idDatSan;
@@ -6,6 +6,8 @@ public class ThongBaoDatSan {
     private String tenNguoiDung;
     private String soDienThoai;
     private String gioBatDau;
+
+    private String ngayDat;
     private int gioSuDung;
     private int thanhTien;
 
@@ -15,7 +17,7 @@ public class ThongBaoDatSan {
 
     // Constructor đầy đủ
     public ThongBaoDatSan(String idDatSan, String idSan, String tenNguoiDung, String soDienThoai,
-                          String gioBatDau, int gioSuDung, int thanhTien) {
+                          String gioBatDau,String ngayDat, int gioSuDung, int thanhTien) {
         this.idDatSan = idDatSan;
         this.idSan = idSan;
         this.tenNguoiDung = tenNguoiDung;
@@ -23,6 +25,7 @@ public class ThongBaoDatSan {
         this.gioBatDau = gioBatDau;
         this.gioSuDung = gioSuDung;
         this.thanhTien = thanhTien;
+        this.ngayDat = ngayDat;
     }
 
     // Getter & Setter
@@ -34,6 +37,13 @@ public class ThongBaoDatSan {
         this.idDatSan = idDatSan;
     }
 
+    public String getNgayDat() {
+        return ngayDat;
+    }
+
+    public void setNgayDat(String ngayDat) {
+        this.ngayDat = ngayDat;
+    }
     public String getIdSan() {
         return idSan;
     }

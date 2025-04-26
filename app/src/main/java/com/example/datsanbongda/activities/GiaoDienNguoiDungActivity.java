@@ -1,4 +1,4 @@
-package com.example.datsanbongda;
+package com.example.datsanbongda.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.datsanbongda.R;
+import com.example.datsanbongda.adapters.SanBongAdapter;
+import com.example.datsanbongda.models.SanBong;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -80,6 +83,7 @@ public class GiaoDienNguoiDungActivity extends AppCompatActivity {
             intent.putExtra("SO_DIEN_THOAI", getIntent().getStringExtra("SO_DIEN_THOAI"));
             startActivity(intent);
         });
+
 
         lvDanhSachSan.setOnItemClickListener((parent, view, position, id) -> {
             if (position < danhSachSanBong.size()) {

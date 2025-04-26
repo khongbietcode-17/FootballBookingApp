@@ -1,5 +1,6 @@
-package com.example.datsanbongda;
+package com.example.datsanbongda.activities;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -11,15 +12,18 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.datsanbongda.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
 public class DatSanActivity extends AppCompatActivity {
 
     private EditText edtGioBatDau, edtGioSuDung;
+    private EditText edtNgayDat;
     private TextView tvThanhTien;
     private int giaSan = 0; // Giá sân nhận từ Intent
 
@@ -32,11 +36,12 @@ public class DatSanActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.datsan);
-
+        edtNgayDat = findViewById(R.id.edt_ngay_dat); // nhớ tạo EditText này bên XML
         edtGioBatDau = findViewById(R.id.edt_gio_bat_dau);
         edtGioSuDung = findViewById(R.id.edt_gio_su_dung);
         tvThanhTien = findViewById(R.id.tv_thanh_tien);
         Button btnDatSan = findViewById(R.id.btn_dat_san);
+        edtNgayDat.setOnClickListener(v -> showDatePicker());
 
 
 
@@ -87,6 +92,19 @@ public class DatSanActivity extends AppCompatActivity {
         tvTenNguoiDung.setText("Tên: " + (tenNguoiDung != null ? tenNguoiDung : "Chưa có"));
         tvSoDienThoai.setText("SĐT: " + (soDienThoai != null ? soDienThoai : "Chưa có"));
     }
+    private void showDatePicker() {
+        final Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+                (view, year1, monthOfYear, dayOfMonth) -> {
+                    String selectedDate = dayOfMonth + "/" + (monthOfYear + 1) + "/" + year1;
+                    edtNgayDat.setText(selectedDate);
+                }, year, month, day);
+        datePickerDialog.show();
+    }
     private void tinhThanhTien() {
         String gioSuDungStr = edtGioSuDung.getText().toString().trim();
         if (!gioSuDungStr.isEmpty()) {
@@ -103,6 +121,7 @@ public class DatSanActivity extends AppCompatActivity {
         String gioBatDau = edtGioBatDau.getText().toString().trim();
         String gioSuDungStr = edtGioSuDung.getText().toString().trim();
         String idSan = getIntent().getStringExtra("ID_SAN");
+        String ngayDat = edtNgayDat.getText().toString().trim();
 
         if (TextUtils.isEmpty(gioBatDau) || TextUtils.isEmpty(gioSuDungStr)) {
             Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
@@ -119,6 +138,7 @@ public class DatSanActivity extends AppCompatActivity {
 
         // Lưu dữ liệu đặt sân gồm thành tiền
         Map<String, Object> datSanData = new HashMap<>();
+        datSanData.put("ngayDat", ngayDat);
         datSanData.put("idDatSan", idDatSan);
         datSanData.put("tenNguoiDung", tenNguoiDung);
         datSanData.put("soDienThoai", soDienThoai);
@@ -135,7 +155,4 @@ public class DatSanActivity extends AppCompatActivity {
                     Toast.makeText(DatSanActivity.this, "Lỗi khi đặt sân!", Toast.LENGTH_SHORT).show();
                 });
     }
-
-
-
 }

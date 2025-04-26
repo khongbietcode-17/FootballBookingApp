@@ -137,7 +137,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="328dp"
+        android:layout_height="398dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="0dp"
         android:layout_marginRight="20dp"
@@ -146,16 +146,29 @@
         android:padding="10dp">
 
         <EditText
+            android:id="@+id/edt_ngay_dat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_edidtext"
+            android:focusable="false"
+            android:hint="Chọn ngày đặt sân"
+            android:inputType="none"
+            android:padding="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
             android:id="@+id/edt_gio_bat_dau"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/rounded_edidtext"
             android:hint="Nhập giờ bắt đầu ( VD: 7 giờ, nhập 7)"
             android:inputType="time"
             android:padding="12dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/edt_ngay_dat" />
 
         <EditText
             android:id="@+id/edt_gio_su_dung"
@@ -175,12 +188,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_background"
+            android:gravity="center"
             android:padding="15dp"
             android:text="0 VNĐ"
+            android:textColor="#333333"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#333333"
-            android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edt_gio_su_dung" />
 

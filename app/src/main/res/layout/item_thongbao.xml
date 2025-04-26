@@ -18,7 +18,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Số điện thoại" />
-
+    <TextView
+        android:id="@+id/tv_ngay_dat_san"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày sử dụng" />
     <TextView
         android:id="@+id/tv_gio_bat_dau"
         android:layout_width="wrap_content"
@@ -30,6 +34,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Giờ sử dụng" />
+
+
+
 
 
 </LinearLayout>
